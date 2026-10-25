@@ -270,3 +270,132 @@ for (let i = 0; i < ages.length; i++){
     }
     console.log(ages[i])
 }
+
+//Part D] Reverse For Loop
+
+//1
+for (let i = 50; i >= 1; i--){
+        if (i % 3 === 0 && i % 9 !== 0){
+            console.log(i)
+        }
+    }
+
+//2
+let num = 4729;
+let product = 1;
+
+for (; num > 0; num = Math.floor(num / 10)){
+        let digit = num % 10;
+        if (digit % 2 !== 0){
+            product = product * digit;
+        }
+    }
+
+    console.log("Product of odd digits:", product)
+
+//3
+let str = "Programming";
+let result = "";
+
+for (let i = str.length - 1; i >= 0; i--){
+        let ch = str[i].toLowerCase();
+        if (ch !== "a" && ch !== "e" && ch !== "i" && ch !== "o" && ch !== "u"){
+            result += str[i];
+        }
+    }
+
+    console.log(result)
+
+//4
+let a = 0;
+let b = 1;
+let fib = "";
+
+for (let i = 0; i < 15; i++){
+        fib += a + " ";
+        let c = a + b;
+        a = b;
+        b = c;
+    }
+
+    let arr = fib.split(" ");
+
+    for (let i = arr.length - 1; i >= 0; i--){
+        console.log(arr[i]);
+    }
+
+//5
+let num = 121;
+let original = num;
+let reverse = 0;
+
+for (; num > 0; num = Math.floor(num / 10)){
+        let digit = num % 10;
+        reverse = reverse * 10 + digit;
+    }
+
+    if (original === reverse){
+        console.log("Palindrome number");
+    } else {
+        console.log("Not a palindrome number");
+    }
+
+//6
+let numbers = [12, 45, 7, 23, 56, 89, 34];
+let largest = -1;
+
+for (let i = numbers.length - 1; i >= 0; i--){
+        if (numbers[i] < 50 && numbers[i] > largest){
+            largest = numbers[i];
+        }
+    }
+
+    console.log("Largest:", largest);
+
+//7
+let temperatures = [32, 28, 41, 19, 35, 27, 38];
+let count = 0;
+
+for (let i = temperatures.length - 1; i >= 0; i--){
+        if (temperatures[i] < 30){
+            count++;
+        }
+    }
+
+    console.log("Colder days:", count)
+
+//8
+let num = 13;
+let binary = "";
+
+if (num === 0){
+    binary = "0";
+}
+
+for (; num > 0; num = Math.floor(num / 2)){
+        binary += num % 2;
+    }
+
+    console.log("Reverse binary:", binary)
+
+//9
+let scores = [90, 85, 70, 95, 60, 88, 75];
+
+for (let i = scores.length - 1; i >= 0; i--){
+        if (scores[i] > 80){
+            console.log("Score:", scores[i]);
+            console.log("Index:", i);
+            break;
+        }
+    }
+
+//10
+for (let i = 40; i >= 1; i--){
+        let root = Math.sqrt(i);
+
+        if (root === Math.floor(root)){
+            continue;
+        }
+
+        console.log(i);
+    }
