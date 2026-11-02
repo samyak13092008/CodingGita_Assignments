@@ -1,1 +1,102 @@
+// Section 1:What is a Function?
+
+//1
+//We use functions to avoid repeating the same code. A function allows us to write code once and use it multiple times whenever needed.
+function greet(){
+    console.log("Hello Students!");
+}
+
+greet();
+greet();
+greet();
+
+//2
+//a] Code Reusability: We can use the same function multiple times.
+//b]Less Code Repetition: Functions prevent writing the same code again and again.
+//c]Easy Debugging: Errors can be found and fixed easily.
+//d]Better Organization: Functions divide a large program into smaller parts.
+
+//3
+//We can create one function containing the welcome message and call it six times wherever required.
+
+function welcome() {
+    console.log("Welcome to JavaScript!");
+}
+
+welcome();
+welcome();
+welcome();
+welcome();
+welcome();
+welcome();
+
+//4
+//Without a function:
+console.log("Welcome to CodingGita");
+console.log("Welcome to CodingGita");
+
+//With a function:
+function greet(){
+    console.log("Welcome to CodingGita");
+}
+
+greet();
+greet();
+
+//5
+//A washing machine is a real-life example of a function. We put dirty clothes and detergent into the machine, start it, and it performs the washing process to give us clean clothes.
+//Similarly, a function takes input, performs a task, and may produce an output.
+
+//6
+//Functions divide a large program into smaller parts. If an error occurs, we can check the particular function instead of checking the entire program.
+
+// Section 2 : Function Declaration
+
+//1
+function displayCourse(){
+    return "JavaScript Fundamentals";
+}
+
+console.log(displayCourse());
+
+//2
+function getStudentsStatus(){
+    return "Active Learner";
+}
+
+let result = getStudentsStatus()
+console.log(result);
+
+//3
+greet();
+
+function greet(){
+    console.log("Hello Students!");
+}
+//It works because function declarations are hoisted in JavaScript. This means they can be called before their actual definition in the code.
+
+// Section 3: Function Expression
+
+//1
+const showMotto = function(){
+    return "Code. Learn. Grow.";
+}
+
+console.log(showMotto())
+
+//2
+const getSemester = function(){
+    return 3;
+}
+
+console.log(getSemester());
+
+//3
+console.log(greet());
+
+const greet = function(){
+    return "Hello";
+}
+//A function expression stored in a const or let variable cannot be accessed before initialization. Unlike function declarations, it is not available for calling before its definition.
+
 
